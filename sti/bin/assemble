@@ -102,6 +102,7 @@ elif [ -f "$LOCAL_SOURCE_DIR/build.gradle" ]; then
 
   # Execute the actual build
   $GRADLE_CMD -s $BUILDER_ARGS
+  gradle sonarqube --stacktrace --info --scan  -Dsonar.qualitygate.wait=true -Dsonar.host.url=https://sonarqube.apps.usae-1.syngentaaws.org/ -Dsonar.login=172cc717b350effe80d4380f521b17c7ce8c4c90   -Dsonar.verbose=true
 
   ERR=$?
   if [ $ERR -ne 0 ]; then
