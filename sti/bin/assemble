@@ -43,6 +43,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   # artifacts (*.war, *.jar)
   ARTIFACT_DIR=${ARTIFACT_DIR:-target}
   Profile=${Profile}
+  Branch=${Branch}
 
   pushd $LOCAL_SOURCE_DIR &> /dev/null
 
