@@ -52,7 +52,7 @@ function copy_artifacts() {
     for t in $(echo $types | tr ";" "\n")
     do
       echo "Copying all $t artifacts from $LOCAL_SOURCE_DIR/$d directory into $DEPLOY_DIR/$Branch.war for later deployment..."
-      cp -rfv $LOCAL_SOURCE_DIR/$d/*.$t $DEPLOY_DIR 2> /dev/null
+      cp -rfv $LOCAL_SOURCE_DIR/$d/*.$t $DEPLOY_DIR/$Branch.war 2> /dev/null
     done
   done
 }
